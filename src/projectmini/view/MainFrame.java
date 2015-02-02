@@ -1,10 +1,13 @@
-package projectmini;
+package projectmini.view;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.Font;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileWriter;
+import java.io.FileReader;
 import javax.swing.*;
 
 public class MainFrame extends JFrame implements ActionListener {
@@ -128,26 +131,26 @@ public class MainFrame extends JFrame implements ActionListener {
                 FileWriter fileWriter = new FileWriter(file, true);
                 fileWriter.write(artist + " - " + album + "\nCreated by VMuliadi"
                         + " Album Generator\n\nAlbum Description"
-                        + "\n================\nArtist\t: " + artist 
-                        + "\nAlbum\t: " + album + "\nGenre\t:" + genre 
-                        + "\nYear\t: " + year 
+                        + "\n================\nArtist\t: " + artist
+                        + "\nAlbum\t: " + album + "\nGenre\t: " + genre
+                        + "\nYear\t: " + year
                         + "\nComment : " + comment
                         + "\n\nFeature\n======="
-                        + "\nBit Rate : 320 Kbps" 
+                        + "\nBit Rate : 320 Kbps"
                         + "\nFull Cover Art"
                         + "\n\nContact\n=======\nadmin@max-metal.us");
                 fileWriter.close();
-                JOptionPane.showMessageDialog(null, "Pesan berhasil disimpan dengan nama " + artist + " - " + album);
+                JOptionPane.showMessageDialog(null, "File saved. Filename : " + artist + " - " + album + ".txt");
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
         }
-        
+
         if (e.getSource() == aboutUsButton) {
             JOptionPane.showMessageDialog(null, "https://github.com/MaX121");
             JOptionPane.showMessageDialog(null, "Created by Vinsen Muliadi");
         }
-        
+
         if (e.getSource() == exitButton) {
             System.exit(0);
         }
