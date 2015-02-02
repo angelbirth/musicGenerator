@@ -1,2 +1,1 @@
-# musicGenerator
-Music Generator - the Code is still messy (I will fix it if my problem with my old thepiratebay account is solved)
+Music Generator - a simple program that created using Java Programming Language that designed for people who loved to share their album music on torrent provider. When you generate text file with this application, you just copy the content of the txt file and pasting to description coloumn. I hope you like it and if you wanna send your idea or warn me a bug(s), please send me an email to admin@max-metal.us. Thanks
