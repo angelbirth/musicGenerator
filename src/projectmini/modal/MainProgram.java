@@ -56,7 +56,7 @@ public class MainProgram {
         this.comment = comment;
     }
     
-    public void simpan() throws Exception {
+    public void simpan() {
         File output = new File(getArtist()+" - " + getAlbum() + ".txt");
         FileOutputStream outputStream = new FileOutputStream(output);
         
