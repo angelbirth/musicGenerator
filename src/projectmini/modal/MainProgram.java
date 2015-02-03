@@ -58,16 +58,16 @@ public class MainProgram {
     
     public void simpan() {
         File output = new File(getArtist()+" - " + getAlbum() + ".txt");
-        FileOutputStream outputStream = new FileOutputStream(output);
+        //FileOutputStream outputStream = new FileOutputStream(output);
         
         try {
-            File file = new File(getArtist()+" - " + getAlbum() + ".txt");
-            FileWriter fileWriter = new FileWriter(file, true);
+            //File file = new File(getArtist()+" - " + getAlbum() + ".txt");
+            FileWriter fileWriter = new FileWriter(output, true);//file, true);
             fileWriter.write(getArtist() + " - " + getAlbum() + "\nArtist : " 
                     + getArtist() + "\nAlbum : " + getAlbum() + "\nYear : " 
                     + getYear() + "\nComment : " + getComment());
             fileWriter.close();
-            JOptionPane.showMessageDialog(null, "Data berhasil disimpan dengan nama " + getArtist() + " - " + getAlbum() + ".txt");
+            JOptionPane.showMessageDialog(null, "Data berhasil disimpan dengan nama " + output.getName());
         } catch(IOException ex) {
             ex.printStackTrace();
         }
